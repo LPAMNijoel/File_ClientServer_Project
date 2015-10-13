@@ -7,10 +7,14 @@ public class client
 	private String clientName;
 	private String userName;
 
-	public client(String a, String b)
+	
+	/*
+	 * to init the client. 
+	 */
+	public client(String userName,String clientName)
 	{
-	a = clientName;
-	b = userName;
+	this.clientName = clientName;
+	this.userName = userName;
 
 	}
 }
