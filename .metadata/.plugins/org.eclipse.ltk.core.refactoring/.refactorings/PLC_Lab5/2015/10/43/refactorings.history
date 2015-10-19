@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Encapsulate field &apos;lab05.Untitled.p&apos; in &apos;lab05.Untitled&apos;&#x0A;- Original project: &apos;PLC_Lab5&apos;&#x0A;- Original element: &apos;lab05.Untitled.p&apos;&#x0A;- Getter method name: &apos;getP&apos;&#x0A;- Setter method name: &apos;setP&apos;&#x0A;- Field visibility: &apos;public&apos;&#x0A;- Use getter and setter methods in declaring type" comments="false" declaring="true" description="Encapsulate field &apos;p&apos;" flags="589830" getter="getP" id="org.eclipse.jdt.ui.self.encapsulate" input="/src&lt;{lab05.java[lab05[Untitled^p" insertion="0" setter="setP" stamp="1445278429731" version="1.0" visibility="1"/>
-</session>
