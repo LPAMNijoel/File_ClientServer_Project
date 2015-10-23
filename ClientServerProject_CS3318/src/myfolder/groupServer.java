@@ -5,13 +5,15 @@ import java.util.Scanner;
 import javax.swing.JOptionPane;
 
 
-public class groupServer extends  client
+public class groupServer
 {
 
-	
+	/*
+	 *  creates the group
+	 */
 	
 	public groupServer(String a, String b) {
-		super(a, b);
+		//super(a, b);
 		// TODO Auto-generated constructor stub
 	}
 

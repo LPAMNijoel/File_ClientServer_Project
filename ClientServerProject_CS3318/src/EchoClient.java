@@ -1,4 +1,5 @@
 import java.net.Socket;             // Used to connect to the server
+import java.util.Scanner;
 import java.io.ObjectInputStream;   // Used to read objects sent from the server
 import java.io.ObjectOutputStream;  // Used to write objects to the server
 import java.io.BufferedReader;      // Needed to read from the console
@@ -24,18 +25,22 @@ public class EchoClient
     {
 	// Error checking for arguments
     // delete args but on another file	
-	if(args.length != 1)
-	    {
-		System.err.println("Not enough arguments.\n");
-		System.err.println("Usage:  java EchoClient <Server name or IP>\n");
-		System.exit(-1);
-	    }
+    	
+    String inputString = "";
+    Scanner cin = new Scanner(System.in);
+   
+//	if(args.length != 1)
+//	    {
+//		System.err.println("Not enough arguments.\n");
+//		System.err.println("Usage:  java EchoClient <Server name or IP>\n");
+//		System.exit(-1);
+//	    }
 
 	try{
 	    // Connect to the specified server
 		// replace the args[0] with string from the input.
-	    final Socket sock = new Socket(args[0], EchoServer.SERVER_PORT);
-	    System.out.println("Connected to " + args[0] + " on port " + EchoServer.SERVER_PORT);
+	    final Socket sock = new Socket(inputString, EchoServer.SERVER_PORT);
+	    System.out.println("Connected to " + inputString + " on port " + EchoServer.SERVER_PORT);
 	    
 	    // Set up I/O streams with the server
 	    final ObjectOutputStream output = new ObjectOutputStream(sock.getOutputStream());

@@ -23,11 +23,14 @@ public class ClientServerGUI
 	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
+			public void run() 
+			{
+				try 
+				{
 					ClientServerGUI window = new ClientServerGUI();
 					window.client_Server_frame.setVisible(true);
-				} catch (Exception e) {
+				} catch (Exception e) 
+				{
 					e.printStackTrace();
 				}
 			}

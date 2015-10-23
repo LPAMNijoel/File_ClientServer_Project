@@ -12,7 +12,7 @@ import java.net.Socket;        // Incoming connections are represented as socket
 public class EchoServer
 {
     /** The server will listen on this port for client connections */
-    public static final int SERVER_PORT = 8765;
+    public static int SERVER_PORT = 8765;
 
     /**
      * Main routine.  Just a dumb loop that keeps accepting new
