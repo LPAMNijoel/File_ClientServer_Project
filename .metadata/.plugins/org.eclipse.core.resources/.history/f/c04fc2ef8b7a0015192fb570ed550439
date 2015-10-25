@@ -1,0 +1,85 @@
+import java.util.*;
+import java.io.IOException;
+import java.net.ServerSocket; 
+import java.net.Socket;
+import java.lang.Thread; 
+import java.io.ObjectInputStream;   // Used to read objects sent from the server
+import java.io.ObjectOutputStream;  // Used to write objects to the server
+/*
+ * this is the clientServer this is suppose to just connect the client to the group server and 
+ * Your implementation of this method is responsible for establishing a connection to the group server
+ * for connect.
+ */
+public class client extends EchoServer 
+{
+	///private String Server;
+	
+	boolean connect(String server, int port)
+	{
+		//this.Server = server;
+		//EchoServer.SERVER_PORT = port;
+		
+		boolean connect = true;
+		if (connect) 
+		
+		{
+			
+			try 	    
+		    {
+		    	// 
+				final Socket clientSocket = new Socket(server,port);
+				System.out.println("Connected to " + server + " on port " +port);
+				 // Set up I/O streams with the server
+			    final ObjectOutputStream output = new ObjectOutputStream(clientSocket.getOutputStream());
+			    final ObjectInputStream input = new ObjectInputStream(clientSocket.getInputStream());
+		    }
+		    catch (IOException e) 
+		    {
+				// TODO Auto-generated catch block
+		    	System.err.println("Error Client Server: " + e.getMessage());
+			    e.printStackTrace(System.err);
+			}
+			
+			return connect;
+		
+		}
+			
+		System.err.println("Error dont work");
+	return false;
+	}
+	
+	void disconnect()
+	{
+		/*
+		 * This method is responsible for cleanly tearing down the connection to the group server.
+		 * It should be invoked when exiting the client application
+		 */
+	}
+	
+	
+	// momhammed implemented this part comment out.
+//	UserToken getToken(String username)
+//	{
+//		
+//	}
+	public static void main(String[] args)
+{
+	
+		 // set the default connect assuming we connect 	
+		 // make the clientobj
+		
+		 client clientobj = new client();
+		 
+		 
+		 Scanner input = new Scanner(System.in);
+		 
+		 
+		 // call the clientobj method to connect 
+		 clientobj.connect(input.toString(), 8765);
+		 
+}
+
+
+}
+
+

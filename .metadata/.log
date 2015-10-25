@@ -5218,3 +5218,352 @@ Binding(ALT+COMMAND+R,
 !MESSAGE The 'org.eclipse.ui.startup' extension from 'com.drgarbage.bytecodevisualizer.plugin' does not provide a 'class' attribute.
 This usage is deprecated and a 'class' attribute should be provided.
 The release after Mars (4.5) will no longer support the deprecated usage!
+
+!ENTRY com.zeroturnaround.eclipse.optimizer.plugin 4 0 2015-10-25 12:55:29.012
+!MESSAGE Unable to load version information
+!STACK 0
+java.net.UnknownHostException: update.zeroturnaround.com: nodename nor servname provided, or not known
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:901)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1293)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1246)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1162)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1098)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:111)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:353)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:380)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:184)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at com.zeroturnaround.eclipse.optimizer.plugin.util.ZtHttpClientImpl.performRequest(ZtHttpClientImpl.java:227)
+	at com.zeroturnaround.eclipse.optimizer.plugin.util.ZtHttpClientImpl.performRequest(ZtHttpClientImpl.java:94)
+	at com.zeroturnaround.eclipse.optimizer.plugin.util.VersionsChecker.loadVersions(VersionsChecker.java:89)
+	at com.zeroturnaround.eclipse.optimizer.plugin.util.VersionsChecker.reloadVersions(VersionsChecker.java:79)
+	at com.zeroturnaround.eclipse.optimizer.plugin.util.VersionsChecker.loadVersions(VersionsChecker.java:70)
+	at com.zeroturnaround.eclipse.optimizer.plugin.Startup$4.run(Startup.java:131)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SESSION 2015-10-25 13:42:14.290 -----------------------------------------------
+eclipse.buildId=4.5.1.M20150904-0015
+java.version=1.7.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/admin/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/admin/.eclipse_keyring -showlocation
+
+!ENTRY hu.ngms.opencl.editor 4 0 2015-10-25 13:42:17.661
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: hu.ngms.opencl.editor [493]
+  Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY hu.ngms.opencl.projectwizard 4 0 2015-10-25 13:42:17.696
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: hu.ngms.opencl.projectwizard [494]
+  Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.jface 2 0 2015-10-25 13:42:43.886
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-10-25 13:42:43.886
+!MESSAGE A conflict occurred for ALT+COMMAND+R:
+Binding(ALT+COMMAND+R,
+	ParameterizedCommand(Command(org.python.pydev.debug.setnext,Set Next Statement,
+		,
+		Category(org.python.pydev.ui.category.run,PyDev - Run,Python run category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@12e8c783,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+COMMAND+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@70827327,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,cocoa,system)
+
+!ENTRY org.eclipse.core.net 1 0 2015-10-25 13:42:46.366
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.osgi 2 0 2015-10-25 13:43:06.388
+!MESSAGE While loading class "org.eclipse.xtext.ui.shared.internal.ExecutableExtensionFactory", thread "Thread[org.eclipse.jdt.internal.ui.text.JavaReconciler,1,main]" timed out waiting (5006ms) for thread "Thread[org.eclipse.jdt.internal.ui.text.JavaReconciler,1,main]" to finish starting bundle "org.eclipse.xtext.ui.shared_2.8.3.v201506010551 [718]". To avoid deadlock, thread "Thread[org.eclipse.jdt.internal.ui.text.JavaReconciler,1,main]" is proceeding but "org.eclipse.xtext.ui.shared.internal.ExecutableExtensionFactory" may not be fully initialized.
+!STACK 0
+org.osgi.framework.BundleException: Unable to acquire the state change lock for the module: osgi.identity; osgi.identity="org.eclipse.xtext.ui.shared"; type="osgi.bundle"; version:Version="2.8.3.v201506010551"; singleton:="true" [id=718] STARTED [STARTED]
+	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:329)
+	at org.eclipse.osgi.container.Module.start(Module.java:389)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:454)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:531)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:324)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:327)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:402)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:352)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:344)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:160)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:573)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:174)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.jdt.internal.core.JavaModelManager$CompilationParticipants$1.run(JavaModelManager.java:344)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.core.JavaModelManager$CompilationParticipants.getCompilationParticipants(JavaModelManager.java:339)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.notifyParticipants(ReconcileWorkingCopyOperation.java:239)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:95)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:729)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:789)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1250)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:126)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.access$0(JavaReconcilingStrategy.java:108)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:89)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:87)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.initialReconcile(JavaReconcilingStrategy.java:178)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.initialReconcile(CompositeReconcilingStrategy.java:114)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.initialReconcile(JavaCompositeReconcilingStrategy.java:136)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.initialProcess(MonoReconciler.java:105)
+	at org.eclipse.jdt.internal.ui.text.JavaReconciler.initialProcess(JavaReconciler.java:406)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:173)
+
+!ENTRY org.eclipse.jdt.core 4 2 2015-10-25 13:43:06.576
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.core".
+!STACK 1
+org.eclipse.core.runtime.CoreException: null ExtensionFactory: org.eclipse.xtext.ui.shared.internal.ExecutableExtensionFactory
+	at org.eclipse.xtext.ui.guice.AbstractGuiceAwareExecutableExtensionFactory.create(AbstractGuiceAwareExecutableExtensionFactory.java:59)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:262)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.jdt.internal.core.JavaModelManager$CompilationParticipants$1.run(JavaModelManager.java:344)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.core.JavaModelManager$CompilationParticipants.getCompilationParticipants(JavaModelManager.java:339)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.notifyParticipants(ReconcileWorkingCopyOperation.java:239)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:95)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:729)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:789)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1250)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:126)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.access$0(JavaReconcilingStrategy.java:108)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:89)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:87)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.initialReconcile(JavaReconcilingStrategy.java:178)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.initialReconcile(CompositeReconcilingStrategy.java:114)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.initialReconcile(JavaCompositeReconcilingStrategy.java:136)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.initialProcess(MonoReconciler.java:105)
+	at org.eclipse.jdt.internal.ui.text.JavaReconciler.initialProcess(JavaReconciler.java:406)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:173)
+Caused by: java.lang.NullPointerException
+	at org.eclipse.xtext.ui.guice.AbstractGuiceAwareExecutableExtensionFactory.create(AbstractGuiceAwareExecutableExtensionFactory.java:52)
+	... 21 more
+!SUBENTRY 1 org.eclipse.xtext.ui.shared 4 0 2015-10-25 13:43:06.577
+!MESSAGE null ExtensionFactory: org.eclipse.xtext.ui.shared.internal.ExecutableExtensionFactory
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.xtext.ui.guice.AbstractGuiceAwareExecutableExtensionFactory.create(AbstractGuiceAwareExecutableExtensionFactory.java:52)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:262)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.jdt.internal.core.JavaModelManager$CompilationParticipants$1.run(JavaModelManager.java:344)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.core.JavaModelManager$CompilationParticipants.getCompilationParticipants(JavaModelManager.java:339)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.notifyParticipants(ReconcileWorkingCopyOperation.java:239)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:95)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:729)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:789)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1250)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:126)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.access$0(JavaReconcilingStrategy.java:108)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:89)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:87)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.initialReconcile(JavaReconcilingStrategy.java:178)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.initialReconcile(CompositeReconcilingStrategy.java:114)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.initialReconcile(JavaCompositeReconcilingStrategy.java:136)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.initialProcess(MonoReconciler.java:105)
+	at org.eclipse.jdt.internal.ui.text.JavaReconciler.initialProcess(JavaReconciler.java:406)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:173)
+!SUBENTRY 1 org.eclipse.xtext.ui.shared 4 0 2015-10-25 13:43:06.577
+!MESSAGE null ExtensionFactory: org.eclipse.xtext.ui.shared.internal.ExecutableExtensionFactory
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.xtext.ui.guice.AbstractGuiceAwareExecutableExtensionFactory.create(AbstractGuiceAwareExecutableExtensionFactory.java:52)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:262)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.jdt.internal.core.JavaModelManager$CompilationParticipants$1.run(JavaModelManager.java:344)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.core.JavaModelManager$CompilationParticipants.getCompilationParticipants(JavaModelManager.java:339)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.notifyParticipants(ReconcileWorkingCopyOperation.java:239)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:95)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:729)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:789)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1250)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:126)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.access$0(JavaReconcilingStrategy.java:108)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:89)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:87)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.initialReconcile(JavaReconcilingStrategy.java:178)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.initialReconcile(CompositeReconcilingStrategy.java:114)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.initialReconcile(JavaCompositeReconcilingStrategy.java:136)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.initialProcess(MonoReconciler.java:105)
+	at org.eclipse.jdt.internal.ui.text.JavaReconciler.initialProcess(JavaReconciler.java:406)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:173)
+
+!ENTRY org.eclipse.jdt.core 4 4 2015-10-25 13:43:06.612
+!MESSAGE Exception occurred while creating compilation participant
+!STACK 1
+org.eclipse.core.runtime.CoreException: null ExtensionFactory: org.eclipse.xtext.ui.shared.internal.ExecutableExtensionFactory
+	at org.eclipse.xtext.ui.guice.AbstractGuiceAwareExecutableExtensionFactory.create(AbstractGuiceAwareExecutableExtensionFactory.java:59)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:262)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.jdt.internal.core.JavaModelManager$CompilationParticipants$1.run(JavaModelManager.java:344)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.core.JavaModelManager$CompilationParticipants.getCompilationParticipants(JavaModelManager.java:339)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.notifyParticipants(ReconcileWorkingCopyOperation.java:239)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:95)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:729)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:789)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1250)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:126)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.access$0(JavaReconcilingStrategy.java:108)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:89)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:87)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.initialReconcile(JavaReconcilingStrategy.java:178)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.initialReconcile(CompositeReconcilingStrategy.java:114)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.initialReconcile(JavaCompositeReconcilingStrategy.java:136)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.initialProcess(MonoReconciler.java:105)
+	at org.eclipse.jdt.internal.ui.text.JavaReconciler.initialProcess(JavaReconciler.java:406)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:173)
+Caused by: java.lang.NullPointerException
+	at org.eclipse.xtext.ui.guice.AbstractGuiceAwareExecutableExtensionFactory.create(AbstractGuiceAwareExecutableExtensionFactory.java:52)
+	... 21 more
+!SUBENTRY 1 org.eclipse.xtext.ui.shared 4 0 2015-10-25 13:43:06.612
+!MESSAGE null ExtensionFactory: org.eclipse.xtext.ui.shared.internal.ExecutableExtensionFactory
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.xtext.ui.guice.AbstractGuiceAwareExecutableExtensionFactory.create(AbstractGuiceAwareExecutableExtensionFactory.java:52)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:262)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.jdt.internal.core.JavaModelManager$CompilationParticipants$1.run(JavaModelManager.java:344)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.core.JavaModelManager$CompilationParticipants.getCompilationParticipants(JavaModelManager.java:339)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.notifyParticipants(ReconcileWorkingCopyOperation.java:239)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:95)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:729)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:789)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1250)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:126)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.access$0(JavaReconcilingStrategy.java:108)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:89)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:87)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.initialReconcile(JavaReconcilingStrategy.java:178)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.initialReconcile(CompositeReconcilingStrategy.java:114)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.initialReconcile(JavaCompositeReconcilingStrategy.java:136)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.initialProcess(MonoReconciler.java:105)
+	at org.eclipse.jdt.internal.ui.text.JavaReconciler.initialProcess(JavaReconciler.java:406)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:173)
+
+!ENTRY org.eclipse.ui 2 0 2015-10-25 13:43:12.852
+!MESSAGE The 'org.eclipse.ui.startup' extension from 'com.drgarbage.bytecodevisualizer.plugin' does not provide a 'class' attribute.
+This usage is deprecated and a 'class' attribute should be provided.
+The release after Mars (4.5) will no longer support the deprecated usage!
+
+!ENTRY org.eclipse.jdt.core 4 4 2015-10-25 16:10:02.362
+!MESSAGE File not found: '/ClientServerProject_CS3318/src/User.java'
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/ClientServerProject_CS3318/src/User.java' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:334)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:208)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:267)
+	at org.eclipse.jdt.internal.core.util.Util.getResourceContentsAsCharArray(Util.java:1190)
+	at org.eclipse.jdt.internal.core.CompilationUnit.getContents(CompilationUnit.java:652)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1125)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:812)
+	at com.chookapp.org.bracketeer.jdt.BracketeerJdtProcessor.processAst(BracketeerJdtProcessor.java:88)
+	at com.chookapp.org.bracketeer.jdt.BracketeerJdtProcessor.processDocument(BracketeerJdtProcessor.java:69)
+	at com.chookapp.org.bracketeer.extensionpoint.BracketeerProcessor.process(BracketeerProcessor.java:47)
+	at com.chookapp.org.bracketeer.core.ProcessingThread.run(ProcessingThread.java:81)
+	at java.lang.Thread.run(Thread.java:744)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2015-10-25 16:10:02.362
+!MESSAGE Resource '/ClientServerProject_CS3318/src/User.java' does not exist.
+
+!ENTRY org.eclipse.jdt.core 4 4 2015-10-25 16:15:12.045
+!MESSAGE File not found: '/ClientServerProject_CS3318/src/EchoServer.java'
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/ClientServerProject_CS3318/src/EchoServer.java' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:334)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:208)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:267)
+	at org.eclipse.jdt.internal.core.util.Util.getResourceContentsAsCharArray(Util.java:1190)
+	at org.eclipse.jdt.internal.core.CompilationUnit.getContents(CompilationUnit.java:652)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1125)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:812)
+	at com.chookapp.org.bracketeer.jdt.BracketeerJdtProcessor.processAst(BracketeerJdtProcessor.java:88)
+	at com.chookapp.org.bracketeer.jdt.BracketeerJdtProcessor.processDocument(BracketeerJdtProcessor.java:69)
+	at com.chookapp.org.bracketeer.extensionpoint.BracketeerProcessor.process(BracketeerProcessor.java:47)
+	at com.chookapp.org.bracketeer.core.ProcessingThread.run(ProcessingThread.java:81)
+	at java.lang.Thread.run(Thread.java:744)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2015-10-25 16:15:12.045
+!MESSAGE Resource '/ClientServerProject_CS3318/src/EchoServer.java' does not exist.
+
+!ENTRY org.eclipse.jdt.core 4 4 2015-10-25 16:15:16.890
+!MESSAGE File not found: '/ClientServerProject_CS3318/src/EchoThread.java'
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/ClientServerProject_CS3318/src/EchoThread.java' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:334)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:208)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:267)
+	at org.eclipse.jdt.internal.core.util.Util.getResourceContentsAsCharArray(Util.java:1190)
+	at org.eclipse.jdt.internal.core.CompilationUnit.getContents(CompilationUnit.java:652)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1125)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:812)
+	at com.chookapp.org.bracketeer.jdt.BracketeerJdtProcessor.processAst(BracketeerJdtProcessor.java:88)
+	at com.chookapp.org.bracketeer.jdt.BracketeerJdtProcessor.processDocument(BracketeerJdtProcessor.java:69)
+	at com.chookapp.org.bracketeer.extensionpoint.BracketeerProcessor.process(BracketeerProcessor.java:47)
+	at com.chookapp.org.bracketeer.core.ProcessingThread.run(ProcessingThread.java:81)
+	at java.lang.Thread.run(Thread.java:744)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2015-10-25 16:15:16.890
+!MESSAGE Resource '/ClientServerProject_CS3318/src/EchoThread.java' does not exist.
+
+!ENTRY org.eclipse.jdt.core 4 4 2015-10-25 16:15:32.099
+!MESSAGE File not found: '/ClientServerProject_CS3318/src/EchoThread.java'
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/ClientServerProject_CS3318/src/EchoThread.java' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:334)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:208)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:267)
+	at org.eclipse.jdt.internal.core.util.Util.getResourceContentsAsCharArray(Util.java:1190)
+	at org.eclipse.jdt.internal.core.CompilationUnit.getContents(CompilationUnit.java:652)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1125)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:812)
+	at com.chookapp.org.bracketeer.jdt.BracketeerJdtProcessor.processAst(BracketeerJdtProcessor.java:88)
+	at com.chookapp.org.bracketeer.jdt.BracketeerJdtProcessor.processDocument(BracketeerJdtProcessor.java:69)
+	at com.chookapp.org.bracketeer.extensionpoint.BracketeerProcessor.process(BracketeerProcessor.java:47)
+	at com.chookapp.org.bracketeer.core.ProcessingThread.run(ProcessingThread.java:81)
+	at java.lang.Thread.run(Thread.java:744)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2015-10-25 16:15:32.100
+!MESSAGE Resource '/ClientServerProject_CS3318/src/EchoThread.java' does not exist.

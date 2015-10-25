@@ -1,0 +1,36 @@
+package myfolder;
+import java.util.*;
+import java.math.*;
+public class UserToken 
+{
+
+	String myToken;
+
+	public String getMyToken() 
+	{
+		return myToken;
+	}
+
+	public void setMyToken(String myToken) 
+	{
+		this.myToken = myToken;
+		
+	}
+	
+	public static void main(String args[])
+{
+		
+		UserToken clientToken = new UserToken();
+		Scanner input = new Scanner(System.in);
+		Random rand = new Random();
+		
+		clientToken.setMyToken(input.next());
+	for (int i = 0; i < ; i++) 
+	{
+		
+	}
+		
+	
+}
+	
+}

@@ -1,0 +1,82 @@
+import java.util.*;
+import java.io.IOException;
+import java.net.ServerSocket; 
+import java.net.Socket;
+import java.lang.Thread; 
+/*
+ * this is the clientServer this is suppose to just connect the client to the group server and 
+ * Your implementation of this method is responsible for establishing a connection to the group server
+ * for connect.
+ */
+public class client extends EchoServer 
+{
+	public String Server;
+	
+	void connect(String server, int port)
+	{
+		this.Server = server;
+		EchoServer.SERVER_PORT = port;
+	}
+	
+	void disconnect()
+	{
+		/*
+		 * This method is responsible for cleanly tearing down the connection to the group server.
+		 * It should be invoked when exiting the client application
+		 */
+	}
+	
+	// momhammed implemented this part comment out.
+//	UserToken getToken(String username)
+//	{
+//		
+//	}
+	public static void main(String[] args)
+{
+	
+		 // set the default connect assuming we connect 
+		
+		 boolean connect = true;
+		// make the clientobj
+		clientServer clientobj = new clientServer();
+		
+		 // This is basically just listens for new client connections
+	    try 
+	    
+	    {
+	    	
+			final ServerSocket serverSock = new ServerSocket(SERVER_PORT);
+			Socket sock = null;
+			EchoThread thread = null;
+			
+			sock = serverSock.accept();
+			thread = new EchoThread(sock);
+			thread.start();
+			
+			if (connect)
+			{		// init the client 
+				clientobj.connect("",EchoServer.SERVER_PORT);
+				//clientobj.connect("The File Server",EchoServer.SERVER_PORT);
+				System.out.println("we connected to the server");
+			}	
+			else
+			{
+				System.out.println("We did not connect to the server.");
+			}
+			
+	    }
+	    catch (IOException e) 
+	    {
+			// TODO Auto-generated catch block
+	    	System.err.println("Error Client Server: " + e.getMessage());
+		    e.printStackTrace(System.err);
+		}
+	
+	
+	
+}
+
+
+}
+
+

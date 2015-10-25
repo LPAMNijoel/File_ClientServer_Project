@@ -1,0 +1,35 @@
+
+public class User
+{
+	private String userName;
+	private client clientobj;
+	// make the default user
+	public User()
+	{
+	userName = "NULL STRING";
+	clientobj = new client();
+	}
+	
+	// get user name
+	public String getUserName()
+	{
+		return userName;
+	}
+	
+	// set the user name
+	public void setUserName(String userName)
+	{
+		this.userName = userName;
+	}
+	
+	public static void main(String[] args) 
+	{
+		User user1 = new User();
+		user1.clientobj.connect("", EchoServer.SERVER_PORT);
+		user1.clientobj.disconnect();
+		
+		// TODO Auto-generated method stub
+
+	}
+
+}

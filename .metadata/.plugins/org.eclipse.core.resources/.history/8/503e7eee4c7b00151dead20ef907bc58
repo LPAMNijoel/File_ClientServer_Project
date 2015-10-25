@@ -1,0 +1,122 @@
+import java.util.*;
+import java.io.IOException;
+import java.net.ServerSocket; 
+import java.net.Socket;
+import java.lang.Thread; 
+import java.io.ObjectInputStream;   // Used to read objects sent from the server
+import java.io.ObjectOutputStream;  // Used to write objects to the server
+/*
+ * this is the clientServer this is suppose to just connect the client to the group server and 
+ * Your implementation of this method is responsible for establishing a connection to the group server
+ * for connect.
+ */
+public class client extends EchoThread 
+{
+	private final Socket clientSocket;  // The  clientSocket that we'll be talking over
+	
+	
+	  /**
+     * Constructor that sets up the socket we'll chat over
+     *
+     * @param _socket The socket passed in from the server
+     */
+	public client(Socket _clientSocket) 
+	{
+		super(_clientSocket);
+		clientSocket = _clientSocket;
+		// TODO Auto-generated constructor stub
+		// TODO Auto-generated constructor stub	
+	}
+
+	                  
+	boolean connect(String server, int port)
+	{
+		
+		boolean connect = true;
+		
+		if (connect) 
+		{
+		runCustomSocket(clientSocket);
+		return true;
+		} 
+		else 
+		{
+		System.err.println("Error Don't work...");	
+		return false;
+		}
+		
+		
+		
+//			try 	    
+//		    {
+//		    	
+//
+//				
+//			    System.out.println("** New connection from " + clientSocket.getInetAddress() + ":" + clientSocket.getPort() + " **");
+//			   
+//				// 
+//				System.out.println("Connected to " + server + " on port "+ EchoServer.SERVER_PORT);
+//				
+//				// Set up I/O streams with the server the client can send(output) and revieves(input)
+//			    final ObjectOutputStream output = new ObjectOutputStream(clientSocket.getOutputStream());
+//			    final ObjectInputStream input = new ObjectInputStream(clientSocket.getInputStream());
+//			    
+//			    System.out.println("** New connection from " + clientSocket.getInetAddress() + ":" + clientSocket.getPort() + " **");
+//			    
+//			    
+//			    // close socket?
+//			    clientSocket.close();
+//		    }
+//		    catch (IOException e) 
+//		    {
+//				// TODO Auto-generated catch block
+//		    	System.err.println("Error Client Server: " + e.getMessage());
+//			    e.printStackTrace(System.err);
+//			}
+//		
+	
+		}
+	
+	void disconnect()
+	{
+		/*
+		 * This method is responsible for cleanly tearing down the connection to the group server.
+		 * It should be invoked when exiting the client application
+		 * 
+		 *  // Close and cleanup
+		 */
+		
+		
+		
+		//System.out.println("** Closing connection with " + socket.getInetAddress() + ":" + socket.getPort() + " **");
+	    //socket.close();
+	}
+	
+	
+	// momhammed implemented this part comment out.
+//	UserToken getToken(String username)
+//	{
+//		
+//	}
+	public static void main(String[] args)
+{
+	
+		 // set the default connect assuming we connect 	
+		 // make the clientobj
+		
+		 client clientobj = new client();
+		 
+		 
+		 // call the clientobj method to connect 
+		// clientobj.connect("", EchoServer.SERVER_PORT);
+		 clientobj.connect("",EchoServer.SERVER_PORT);
+		 
+		 
+		 // close the scanner.
+		// input.close();
+}
+
+
+}
+
+
