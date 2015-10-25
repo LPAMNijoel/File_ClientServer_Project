@@ -1,8 +1,10 @@
+package instructor;
 import java.lang.Thread;            // We will extend Java's base Thread class
 import java.net.Socket;
+import java.io.EOFException;
 import java.io.ObjectInputStream;   // For reading Java objects off of the wire
 import java.io.ObjectOutputStream;  // For writing Java objects to the wire
-
+import java.net.ServerSocket; 
 /**
  * A simple server thread.  This class just echoes the messages sent
  * over the socket until the socket is closed.
@@ -11,7 +13,7 @@ import java.io.ObjectOutputStream;  // For writing Java objects to the wire
 public class EchoThread extends Thread
 {
     private final Socket socket;                   // The socket that we'll be talking over
-
+     
     /**
      * Constructor that sets up the socket we'll chat over
      *
@@ -31,7 +33,8 @@ public class EchoThread extends Thread
      */
     public void run()
     {
-	try{
+	try
+	{
 	    // Print incoming message
 	    System.out.println("** New connection from " + socket.getInetAddress() + ":" + socket.getPort() + " **");
 
@@ -42,7 +45,8 @@ public class EchoThread extends Thread
 	    // Loop to read messages
 	    Message msg = null;
 	    int count = 0;
-	    do{
+	    do
+	    {
 		// read and print message
 		msg = (Message)input.readObject();
 		System.out.println("[" + socket.getInetAddress() + ":" + socket.getPort() + "] " + msg.theMessage);
@@ -50,6 +54,13 @@ public class EchoThread extends Thread
 		// Write an ACK back to the sender
 		count++;
 		output.writeObject(new Message("Recieved message #" + count));
+		
+		//if () 
+		//{
+			
+	//	}
+		
+		//output.writeObject(new client);
 
 	    }
 	    while(!msg.theMessage.toUpperCase().equals("EXIT"));
@@ -57,13 +68,64 @@ public class EchoThread extends Thread
 	    // Close and cleanup
 	    System.out.println("** Closing connection with " + socket.getInetAddress() + ":" + socket.getPort() + " **");
 	    socket.close();
-
 	}
-	catch(Exception e){
+	
+	
+		catch(EOFException e)
+	{
+			System.out.println("Connection Terminated...");
+	}
+	catch(Exception e)
+	{
 	    System.err.println("Error: " + e.getMessage());
 	    e.printStackTrace(System.err);
 	}
 
+	
+	
     }  //-- end run()
+    
+	public void runCustomSocket(Socket socketObj)
+    {
+	try
+	{
+	    // Print incoming message
+	    System.out.println("** New connection from " + socketObj.getInetAddress() + ":" + socketObj.getPort() + " **");
 
-} //-- end class EchoThread
+	    // set up I/O streams with the client
+	    final ObjectInputStream input = new ObjectInputStream(socketObj.getInputStream());
+	    final ObjectOutputStream output = new ObjectOutputStream(socketObj.getOutputStream());
+
+	    
+	    
+//	    // Loop to read messages
+//	    Message msg = null;
+//	    int count = 0;
+//	    do
+//	    {
+//		// read and print message
+//		msg = (Message)input.readObject();
+//		System.out.println("[" + socket.getInetAddress() + ":" + socket.getPort() + "] " + msg.theMessage);
+//
+//		// Write an ACK back to the sender
+//		count++;
+//		output.writeObject(new Message("Recieved message #" + count));
+//
+//	    }
+//	    while(!msg.theMessage.toUpperCase().equals("EXIT"));
+
+	    // Close and cleanup
+	    System.out.println("** Closing connection with " + socket.getInetAddress() + ":" + socket.getPort() + " **");
+	    socket.close();
+
+	}
+
+	catch(Exception e)
+	{
+	    System.err.println("Error: " + e.getMessage());
+	    e.printStackTrace(System.err);
+	}
+
+    } //-- end class EchoThread
+
+}	

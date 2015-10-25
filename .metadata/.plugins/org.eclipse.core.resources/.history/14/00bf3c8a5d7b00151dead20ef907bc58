@@ -15,7 +15,7 @@ public class Message implements java.io.Serializable
      *
      * @param _msg The string to be encoded in this Message object
      *
-     */
+   */
     public Message(String _msg)
     {
 	theMessage = _msg;
