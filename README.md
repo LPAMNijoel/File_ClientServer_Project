@@ -1,7 +1,6 @@
 # File_ClientServer_Project
 
-copy and paste this link.
-experiment with and apply the security concepts that are covered in the classroom by developing a group based file sharing application that is secure against a number of different types of security threats. At a high level, the system will consist of three main components: a single group server, a file server, and some number of clients.
+experiment with and apply the security concepts that are covered by developing a group based file sharing application that is secure against a number of different types of security threats. At a high level, the system will consist of three main components: a single group server, a file server, and some number of clients.
 The group server manages the users in the system and keeps track of the groups to which each user belongs. The group server will provide each legitimate user with an authentication token. Users within the system make use of a networked client application to log in to the system and manage their groups (via the group server), as well as view files stored in the system (via the file servers).
 
 
